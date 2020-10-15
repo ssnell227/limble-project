@@ -1,12 +1,29 @@
-
-
 <div class="container">
-  <div class='form'>
-    <app-comments (toggleTagListEvent)='toggleTagList($event)'></app-comments>
-    
+  <div class="form">
+    <div class="level">
+      <div class="field">
+        <app-text-input
+          (sendText)="updateText($event)"
+          (toggleTagListEvent)="toggleTagList($event)"
+        ></app-text-input>
+      </div>
+      <div class='level-right'>
+        <div class="field">
+          <div class="control">
+            <button class="button">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <app-tag-list
+        [users]="users"
+        [currentText]="currentText"
+        *ngIf="showTagList"
+        (sendMatchedUser)="updateMatchedUser($event)"
+      ></app-tag-list>
+    </div>
   </div>
-  <app-tag-list *ngIf='showTagList' ></app-tag-list>
 </div>
-
 
 <router-outlet></router-outlet>

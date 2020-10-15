@@ -1,1 +1,9 @@
-<p>tag-list works!</p>
+<div class="control">
+  <div class="select is-mulitple" >
+    <select multiple size="4">
+      <option *ngFor='let user of filteredUsers'>
+          {{user.name}}
+      </option>
+    </select>
+  </div>
+</div>
