@@ -3,16 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TagListDirective } from './tag-list.directive';
 import { TagListComponent } from './shared/tag-list/tag-list.component';
-import { CommentsComponent } from './shared/comments/comments.component';
+import { textInputComponent } from './shared/text-input/textInput.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TagListDirective,
     TagListComponent,
-    CommentsComponent,
+    textInputComponent,
   ],
   imports: [
     BrowserModule,
