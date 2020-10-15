@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'limble-project';
+  showTagList = false;
+  
+  toggleTagList(event: boolean) {
+    this.showTagList = event
+    console.log(this.showTagList)
+  }
+
+  
 }
